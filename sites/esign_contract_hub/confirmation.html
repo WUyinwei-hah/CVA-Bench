@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>North Harbor Sign | Envelope Sent</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="confirmation">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand-block">
+        <div class="brand-mark">NS</div>
+        <div>
+          <p class="eyebrow">Agreement Desk</p>
+          <h1>North Harbor Sign</h1>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="main-header">
+        <div>
+          <p class="eyebrow">Signing Result</p>
+          <h2>Envelope sent</h2>
+          <p class="header-copy">The supplier addendum has been submitted to the hosted signing provider.</p>
+        </div>
+        <div class="status-cluster">
+          <span class="status-label">Envelope status</span>
+          <span id="esign-status-chip" class="status-chip status-connected">Sent for signature</span>
+        </div>
+      </header>
+
+      <section class="dashboard-kpis">
+        <article class="kpi-card kpi-primary">
+          <span class="kpi-label">Recipients</span>
+          <strong>2</strong>
+          <p>Signer routing is active for supplier and internal approver.</p>
+        </article>
+        <article class="kpi-card kpi-secondary">
+          <span class="kpi-label">Delivery state</span>
+          <strong>Queued</strong>
+          <p>Hosted signing provider accepted the envelope and is dispatching recipient emails.</p>
+        </article>
+      </section>
+
+      <section class="hero-grid confirmation-grid">
+        <article class="hero-card contract-workbench">
+          <div class="hero-topline">
+            <div>
+              <p class="hero-kicker">Confirmation</p>
+              <h3>Sent for signature</h3>
+            </div>
+            <div class="hero-chip-group">
+              <span class="hero-chip">Hosted provider</span>
+              <span class="hero-chip">Recipient routing active</span>
+            </div>
+          </div>
+
+          <div class="provider-summary-grid">
+            <div class="summary-card">
+              <span class="summary-label">Document</span>
+              <strong>Supplier Addendum</strong>
+            </div>
+            <div class="summary-card">
+              <span class="summary-label">Workspace</span>
+              <strong>North Harbor Legal</strong>
+            </div>
+            <div class="summary-card">
+              <span class="summary-label">Status</span>
+              <strong>Awaiting signatures</strong>
+            </div>
+          </div>
+
+          <p id="esign-success-copy" class="hero-copy">
+            The supplier addendum has been sent for signature.
+          </p>
+
+          <div class="recipient-panel">
+            <div class="recipient-row">
+              <div>
+                <strong>Supplier legal</strong>
+                <p>Envelope email queued with signing order position 1.</p>
+              </div>
+              <span class="recipient-status">Queued</span>
+            </div>
+            <div class="recipient-row">
+              <div>
+                <strong>North Harbor approver</strong>
+                <p>Receives the document after supplier signature completes.</p>
+              </div>
+              <span class="recipient-status muted-status">Sequential</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-card muted-card contract-insights-card">
+          <p class="hero-kicker">Recent Activity</p>
+          <div class="event-feed">
+            <p class="event-item">Envelope uploaded to hosted signing provider.</p>
+            <p class="event-item">Signer routing order confirmed.</p>
+            <p class="event-item">Envelope status changed to sent for signature.</p>
+          </div>
+          <div class="insight-card">
+            <strong>Completion rule</strong>
+            <p>The task is complete when the envelope status is visible as Sent for signature.</p>
+          </div>
+          <div class="insight-card">
+            <strong>Provider handoff</strong>
+            <p>Third-party delivery challenge is satisfied for this envelope dispatch.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

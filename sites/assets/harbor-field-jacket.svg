@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">Harbor Field Jacket Illustration</title>
+  <desc id="desc">A simple product illustration of a field jacket.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f5efe3"/>
+      <stop offset="100%" stop-color="#d9cfbf"/>
+    </linearGradient>
+    <linearGradient id="coat" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#b19a72"/>
+      <stop offset="100%" stop-color="#8b7653"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="640" rx="32" fill="url(#bg)"/>
+  <rect x="156" y="112" width="328" height="408" rx="28" fill="url(#coat)"/>
+  <path d="M240 112l80 92 80-92h52v124l-54 46v238H242V282l-54-46V112z" fill="#9a8661"/>
+  <path d="M280 112h80l24 64-64 54-64-54z" fill="#203447"/>
+  <rect x="303" y="198" width="34" height="242" rx="12" fill="#d8c7a0"/>
+  <circle cx="320" cy="246" r="8" fill="#203447"/>
+  <circle cx="320" cy="292" r="8" fill="#203447"/>
+  <circle cx="320" cy="338" r="8" fill="#203447"/>
+  <circle cx="320" cy="384" r="8" fill="#203447"/>
+  <rect x="220" y="302" width="74" height="66" rx="12" fill="#8a7553"/>
+  <rect x="346" y="302" width="74" height="66" rx="12" fill="#8a7553"/>
+  <path d="M198 210l-42 48 42 34 26-46z" fill="#7c6848"/>
+  <path d="M442 210l42 48-42 34-26-46z" fill="#7c6848"/>
+  <rect x="176" y="520" width="288" height="32" rx="16" fill="#000" opacity=".08"/>
+</svg>

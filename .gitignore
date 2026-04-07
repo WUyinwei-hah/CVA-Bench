@@ -1,0 +1,11 @@
+logs/
+screenshots/
+traces/
+dom/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.DS_Store
+public_release/
+dist/

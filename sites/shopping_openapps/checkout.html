@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar Supply | Checkout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="checkout">
+  <div class="shop-shell">
+    <div class="announcement-bar">
+      <div class="container announcement-bar-inner">
+        <span>Priority shipping selected for this order</span>
+        <span>Card on file ends in 4403</span>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg shop-nav">
+      <div class="container">
+        <a class="navbar-brand shop-brand" href="./index.html">
+          <span class="brand-mark">NS</span>
+          <span>Northstar Supply</span>
+        </a>
+        <div class="shop-linkbar d-none d-lg-flex ms-4">
+          <a href="#" class="nav-link-inline">Checkout</a>
+          <a href="#" class="nav-link-inline">Shipping</a>
+          <a href="#" class="nav-link-inline">Support</a>
+        </div>
+        <div class="shop-nav-actions ms-auto">
+          <span id="shopping-status-chip" class="status-chip">Cart ready</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+      <div class="checkout-progress">
+        <span class="progress-pill is-complete">Bag</span>
+        <span class="progress-pill is-active">Shipping</span>
+        <span class="progress-pill">Review</span>
+      </div>
+
+      <section class="row g-4 align-items-start">
+        <div class="col-xl-8">
+          <section class="stage-card">
+            <div class="stage-head">
+              <div>
+                <p class="eyebrow">Shopping Cart</p>
+                <h3>Review cart and shipping details</h3>
+              </div>
+              <span class="section-step">Step 1 of 2</span>
+            </div>
+
+            <div class="cart-line-item">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+                alt="Transit Runner 2.0 cart item"
+              >
+              <div class="cart-line-copy">
+                <strong>Transit Runner 2.0</strong>
+                <p>Signal Red · US 9 · Quantity 1</p>
+              </div>
+              <div class="cart-line-price">$84.00</div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-lg-7">
+                <div class="form-card">
+                  <div class="form-section-head">
+                    <h4>Contact and delivery</h4>
+                    <p class="sidebar-copy">Everything below can still be updated before the order is placed.</p>
+                  </div>
+                  <label class="field">
+                    <span>Full name</span>
+                    <input id="shipping-name" type="text" value="Jordan Hale" autocomplete="off">
+                  </label>
+                  <label class="field">
+                    <span>Shipping address</span>
+                    <textarea id="shipping-address" rows="3" autocomplete="off">9 Marine Row
+Test City, TS 10002</textarea>
+                  </label>
+                  <div class="grid-two">
+                    <label class="field">
+                      <span>Shipping speed</span>
+                      <input type="text" value="Priority · 2 business days" autocomplete="off">
+                    </label>
+                    <label class="field">
+                      <span>Email receipt</span>
+                      <input type="email" value="jordan.hale@example.com" autocomplete="off">
+                    </label>
+                  </div>
+
+                  <div class="shipping-methods">
+                    <div class="shipping-method-card is-selected">
+                      <div>
+                        <strong>Priority shipping</strong>
+                        <p>2 business days, dispatched from North Pier</p>
+                      </div>
+                      <span>Free</span>
+                    </div>
+                    <div class="shipping-method-card">
+                      <div>
+                        <strong>Standard shipping</strong>
+                        <p>4 business days, lower-priority courier route</p>
+                      </div>
+                      <span>$4.00</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="summary-card">
+                  <div class="summary-product-line">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Transit Runner 2.0 checkout summary">
+                    <div>
+                      <strong>Transit Runner 2.0</strong>
+                      <p>Signal Red · US 9</p>
+                    </div>
+                  </div>
+                  <div class="summary-row"><span>Items</span><strong>$84.00</strong></div>
+                  <div class="summary-row"><span>Shipping</span><strong>$0.00</strong></div>
+                  <div class="summary-row"><span>Tax</span><strong>$0.00</strong></div>
+                  <div class="summary-row total"><span>Total</span><strong>$84.00</strong></div>
+                  <button id="continue-to-review" class="continue-button" type="button">Continue to Review</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-xl-4">
+          <aside class="stacked-sidebar">
+            <section class="sidebar-card activity-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Order activity</span>
+              </div>
+              <div id="shopping-event-feed" class="event-feed"></div>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Delivery Summary</span>
+              </div>
+              <p class="sidebar-copy">
+                Orders placed before 18:00 stay eligible for same-day dispatch from the North Pier warehouse.
+              </p>
+              <div class="info-list-card">
+                <div class="info-list-row"><span>Warehouse</span><strong>North Pier Fulfillment</strong></div>
+                <div class="info-list-row"><span>Carrier</span><strong>Priority courier</strong></div>
+                <div class="info-list-row"><span>Signature</span><strong>Not required</strong></div>
+              </div>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Customer Care</span>
+              </div>
+              <div class="info-list-card">
+                <div class="info-list-row"><span>Address changes</span><strong>Available before payment</strong></div>
+                <div class="info-list-row"><span>Gift notes</span><strong>Disabled for this order</strong></div>
+                <div class="info-list-row"><span>Receipt</span><strong>Email confirmation enabled</strong></div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

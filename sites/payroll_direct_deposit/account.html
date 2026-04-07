@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Harbor Payroll direct deposit edit form">
+  <title>Harbor Payroll | Edit Direct Deposit</title>
+  <link rel="shortcut icon" href="../_vendor/adminkit/img/icons/icon-48x48.png">
+  <link href="../_vendor/adminkit/css/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="account">
+  <div class="wrapper payroll-template-shell">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="./index.html">
+          <span class="align-middle">Harbor Payroll</span>
+        </a>
+        <ul class="sidebar-nav">
+          <li class="sidebar-header">Payroll Operations</li>
+          <li class="sidebar-item active">
+            <a class="sidebar-link" href="./index.html">
+              <i class="align-middle" data-feather="credit-card"></i>
+              <span class="align-middle">Direct Deposit</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Update payout account</h1>
+            <span id="payroll-status-chip" class="status-chip ms-2">Editing deposit details</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-xxl-9">
+              <div class="card hero-card-xl">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap">
+                    <div>
+                      <h5 class="card-title mb-1">Direct deposit setup</h5>
+                      <h6 class="card-subtitle text-muted">Step 1 of 2. Update the destination bank details for the next payroll cycle.</h6>
+                    </div>
+                    <span class="badge text-bg-light">Step 1 of 2</span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-employee">Employee</label>
+                      <input id="deposit-employee" class="form-control form-control-lg" type="text" value="Jordan Hale" autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-bank-name">Bank name</label>
+                      <input id="deposit-bank-name" class="form-control form-control-lg" type="text" value="North Harbor Credit Union" autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-routing">Routing number</label>
+                      <input id="deposit-routing" class="form-control form-control-lg" type="text" value="031090411" autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-account-ending">Account ending</label>
+                      <input id="deposit-account-ending" class="form-control form-control-lg" type="text" value="4021" autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-type">Deposit type</label>
+                      <input id="deposit-type" class="form-control form-control-lg" type="text" value="Checking" autocomplete="off">
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="deposit-allocation">Allocation</label>
+                      <input id="deposit-allocation" class="form-control form-control-lg" type="text" value="100% primary payroll" autocomplete="off">
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="deposit-note">Processing note</label>
+                      <textarea id="deposit-note" class="form-control" rows="4" autocomplete="off">Apply this bank setup to the next payroll cycle and keep the previous account inactive after the update is saved.</textarea>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-end mt-4">
+                    <button id="continue-to-review" class="btn btn-primary btn-lg" type="button">Review Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-xxl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Change request</h5>
+                </div>
+                <div class="card-body">
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Effective cycle</span>
+                    <strong>Friday payroll</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Update scope</span>
+                    <strong>Primary deposit only</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Fallback</span>
+                    <strong>Paper check disabled</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../_vendor/adminkit/js/app.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

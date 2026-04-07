@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Harbor Payroll direct deposit workspace">
+  <title>Harbor Payroll | Direct Deposit</title>
+  <link rel="shortcut icon" href="../_vendor/adminkit/img/icons/icon-48x48.png">
+  <link href="../_vendor/adminkit/css/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="dashboard">
+  <div class="wrapper payroll-template-shell">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="./index.html">
+          <span class="align-middle">Harbor Payroll</span>
+        </a>
+
+        <ul class="sidebar-nav">
+          <li class="sidebar-header">Payroll Operations</li>
+          <li class="sidebar-item active">
+            <a class="sidebar-link" href="./index.html">
+              <i class="align-middle" data-feather="credit-card"></i>
+              <span class="align-middle">Direct Deposit</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="users"></i>
+              <span class="align-middle">Employees</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="calendar"></i>
+              <span class="align-middle">Payroll Calendar</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-link" href="#">
+              <i class="align-middle" data-feather="shield"></i>
+              <span class="align-middle">Compliance</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-cta">
+          <div class="sidebar-cta-content">
+            <strong class="d-inline-block mb-2">Friday cutoff</strong>
+            <div class="mb-3 text-sm">
+              Direct deposit edits remain open until 5:00 PM. Trusted bank verification may appear immediately before saving.
+            </div>
+            <span class="badge text-bg-light">Biweekly US Payroll</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Update the direct deposit account before payroll closes</h1>
+            <span id="payroll-status-chip" class="status-chip ms-2">Payroll ready</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-xxl-9">
+              <div class="card hero-card-xl">
+                <div class="card-header">
+                  <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap">
+                    <div>
+                      <h5 class="card-title mb-1">Direct deposit change request</h5>
+                      <h6 class="card-subtitle text-muted">Review the employee payout profile, update the routing target, and finish when the payroll status shows Saved.</h6>
+                    </div>
+                    <div class="badge-stack">
+                      <span class="badge text-bg-light">Employee payout setup</span>
+                      <span class="badge text-bg-light">ACH handoff</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                      <div class="payroll-stat-card">
+                        <span class="payroll-stat-label">Primary payout</span>
+                        <strong>North Harbor Checking</strong>
+                        <small>Account ending in 4021</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="payroll-stat-card">
+                        <span class="payroll-stat-label">Employee</span>
+                        <strong>Jordan Hale</strong>
+                        <small>Planning Ops</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="payroll-stat-card">
+                        <span class="payroll-stat-label">Update window</span>
+                        <strong>Open until cutoff</strong>
+                        <small>Final bank check may appear</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="payroll-steps">
+                    <div class="payroll-step">
+                      <span class="payroll-step-index">1</span>
+                      <div>
+                        <strong>Open the direct deposit flow</strong>
+                        <p>Edit the bank destination for the next payroll cycle.</p>
+                      </div>
+                    </div>
+                    <div class="payroll-step">
+                      <span class="payroll-step-index">2</span>
+                      <div>
+                        <strong>Review the routing details</strong>
+                        <p>Check the bank label, routing number, and allocation before saving.</p>
+                      </div>
+                    </div>
+                    <div class="payroll-step">
+                      <span class="payroll-step-index">3</span>
+                      <div>
+                        <strong>Finish when the status shows Saved</strong>
+                        <p>The task is complete only after the payroll profile confirms the update.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-2 mt-4">
+                    <button id="start-deposit-flow" class="btn btn-primary btn-lg" type="button">Update Direct Deposit</button>
+                    <a class="btn btn-outline-secondary btn-lg" href="#">View Payroll Calendar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-xxl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Employee profile</h5>
+                </div>
+                <div class="card-body">
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Department</span>
+                    <strong>Planning Ops</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Pay group</span>
+                    <strong>Biweekly US Payroll</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Last update</span>
+                    <strong>Jan 12</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card mt-4">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Reminder</h5>
+                </div>
+                <div class="card-body">
+                  <p class="text-secondary mb-0">
+                    Confirm the bank label, routing destination, and deposit split before the payroll profile is submitted for processing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../_vendor/adminkit/js/app.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

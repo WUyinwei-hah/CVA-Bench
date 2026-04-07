@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="OpenClaw advanced usage confirmation">
+  <title>OpenClaw | Advanced Usage Enabled</title>
+  <link rel="shortcut icon" href="../_vendor/adminkit/img/icons/icon-48x48.png">
+  <link href="../_vendor/adminkit/css/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="usage-confirmation">
+  <div class="wrapper openclaw-template-shell">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="./index.html">
+          <span class="align-middle">OpenClaw</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Advanced usage breakdown</h1>
+            <span id="usage-status-chip" class="status-chip status-connected ms-2">Enabled</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-xxl-9">
+              <div class="card success-flow-card">
+                <div class="card-body">
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                      <div class="workspace-stat-card">
+                        <span class="workspace-stat-label">Workspace</span>
+                        <strong>atlas-dev</strong>
+                        <small>Admin verified</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="workspace-stat-card">
+                        <span class="workspace-stat-label">Trace explorer</span>
+                        <strong>Enabled</strong>
+                        <small>30-day retention active</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="workspace-stat-card">
+                        <span class="workspace-stat-label">Cost attribution</span>
+                        <strong>Per provider</strong>
+                        <small>Advanced mode on</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h5 class="card-title mb-2">Enabled</h5>
+                  <p id="usage-success-copy" class="mb-4">Advanced usage breakdown is now enabled for atlas-dev.</p>
+
+                  <div class="workspace-steps">
+                    <div class="workspace-step">
+                      <span class="workspace-step-index">1</span>
+                      <div>
+                        <strong>Trace explorer unlocked</strong>
+                        <p>Detailed request traces are now available for this workspace.</p>
+                      </div>
+                    </div>
+                    <div class="workspace-step">
+                      <span class="workspace-step-index">2</span>
+                      <div>
+                        <strong>Cost drilldown active</strong>
+                        <p>Provider-level cost attribution is included in the analytics dashboard.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-xxl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Recent activity</h5>
+                </div>
+                <div class="card-body">
+                  <div class="event-feed-card">
+                    <p class="event-item">Workspace verification accepted.</p>
+                    <p class="event-item">Advanced usage mode promoted to active.</p>
+                    <p class="event-item">Trace explorer and cost attribution are now visible.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../_vendor/adminkit/js/app.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

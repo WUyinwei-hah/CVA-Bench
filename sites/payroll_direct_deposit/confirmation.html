@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Harbor Payroll confirmation">
+  <title>Harbor Payroll | Confirmation</title>
+  <link rel="shortcut icon" href="../_vendor/adminkit/img/icons/icon-48x48.png">
+  <link href="../_vendor/adminkit/css/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="confirmation">
+  <div class="wrapper payroll-template-shell">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="./index.html">
+          <span class="align-middle">Harbor Payroll</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="main">
+      <nav class="navbar navbar-expand navbar-light navbar-bg">
+        <a class="sidebar-toggle js-sidebar-toggle">
+          <i class="hamburger align-self-center"></i>
+        </a>
+      </nav>
+
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Deposit update saved</h1>
+            <span id="payroll-status-chip" class="status-chip is-confirmed ms-2">Saved</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8">
+              <div class="card success-flow-card">
+                <div class="card-body">
+                  <p class="text-uppercase small fw-semibold text-success mb-2">Confirmation</p>
+                  <p class="text-secondary">
+                    The payroll profile has been updated and the employee direct deposit setup is now marked Saved.
+                  </p>
+                  <div class="review-summary-card">
+                    <div class="payroll-detail-row"><span>Status</span><strong>Saved</strong></div>
+                    <div class="payroll-detail-row"><span>Employee</span><strong>Jordan Hale</strong></div>
+                    <div class="payroll-detail-row"><span>Account</span><strong>North Harbor Checking ending in 4021</strong></div>
+                    <div class="payroll-detail-row"><span>Request</span><strong id="request-id-line">Request ID PD-20481</strong></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Processing details</h5>
+                </div>
+                <div class="card-body">
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Routing status</span>
+                    <strong>Verified</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Effective cycle</span>
+                    <strong>Friday, Apr 10</strong>
+                  </div>
+                  <div class="payroll-note-item">
+                    <span class="text-muted d-block mb-1">Payout state</span>
+                    <strong>Ready for payroll</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../_vendor/adminkit/js/app.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

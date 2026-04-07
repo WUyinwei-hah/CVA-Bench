@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Northstar Security Console | Rotation Complete</title>
+  <link rel="shortcut icon" href="../_vendor/adminkit/img/icons/icon-48x48.png">
+  <link href="../_vendor/adminkit/css/app.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="confirmation">
+  <div class="wrapper admin-template-shell">
+    <nav id="sidebar" class="sidebar js-sidebar">
+      <div class="sidebar-content js-simplebar">
+        <a class="sidebar-brand" href="./index.html">
+          <span class="align-middle">Northstar Security</span>
+        </a>
+      </div>
+    </nav>
+
+    <div class="main">
+      <main class="content">
+        <div class="container-fluid p-0">
+          <div class="mb-3">
+            <h1 class="h3 d-inline align-middle">Service token rotated</h1>
+            <span id="admin-status-chip" class="badge bg-success-subtle text-success-emphasis ms-2">Rotated</span>
+          </div>
+
+          <div class="row">
+            <div class="col-xl-8 col-xxl-9">
+              <div class="card hero-card-xl">
+                <div class="card-body">
+                  <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                      <div class="security-stat-card">
+                        <span class="security-stat-label">Service</span>
+                        <strong>billing-export</strong>
+                        <small>Production sandbox</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="security-stat-card">
+                        <span class="security-stat-label">Rotation state</span>
+                        <strong>Committed</strong>
+                        <small>Audit trail recorded</small>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="security-stat-card">
+                        <span class="security-stat-label">Scope</span>
+                        <strong>Signed export path</strong>
+                        <small>New token active</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h5 class="card-title mb-2">Privileged rotation completed</h5>
+                  <p id="admin-success-copy" class="mb-4">The billing-export service token is now rotated.</p>
+
+                  <div class="rotation-summary-card">
+                    <div class="security-mini-card">
+                      <span>Audit event</span>
+                      <strong>Rotation committed to control plane</strong>
+                    </div>
+                    <div class="security-mini-card">
+                      <span>Next action</span>
+                      <strong>Signed export jobs continue with the new credential</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4 col-xxl-3">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-title mb-0">Recent activity</h5>
+                </div>
+                <div class="card-body">
+                  <div class="rotation-event-list">
+                    <div class="rotation-event-item">Rotation challenge passed.</div>
+                    <div class="rotation-event-item">New service token promoted to active.</div>
+                    <div class="rotation-event-item">Audit logger recorded the change window.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../_vendor/adminkit/js/app.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

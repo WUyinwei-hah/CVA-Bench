@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northstar Supply | Product</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="product">
+  <div class="shop-shell">
+    <div class="announcement-bar">
+      <div class="container announcement-bar-inner">
+        <span>Free priority shipping on orders over $60</span>
+        <span>30-day returns and live support until 20:00</span>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg shop-nav">
+      <div class="container">
+        <a class="navbar-brand shop-brand" href="./index.html">
+          <span class="brand-mark">NS</span>
+          <span>Northstar Supply</span>
+        </a>
+        <div class="shop-linkbar d-none d-lg-flex ms-4">
+          <a href="#" class="nav-link-inline">New arrivals</a>
+          <a href="#" class="nav-link-inline">Footwear</a>
+          <a href="#" class="nav-link-inline">Travel</a>
+          <a href="#" class="nav-link-inline">Support</a>
+        </div>
+        <div class="shop-nav-actions ms-auto">
+          <a href="#" class="nav-link-inline d-none d-md-inline-flex">Account</a>
+          <a href="#" class="nav-link-inline d-none d-md-inline-flex">Help</a>
+          <span class="cart-badge"><i class="fa-solid fa-bag-shopping"></i> 1</span>
+          <span id="shopping-status-chip" class="status-chip">Browsing</span>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+      <div class="store-breadcrumb">
+        <a href="#" class="breadcrumb-link">Home</a>
+        <span>/</span>
+        <a href="#" class="breadcrumb-link">Footwear</a>
+        <span>/</span>
+        <span>Transit Runner 2.0</span>
+      </div>
+
+      <section class="hero-card mb-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <p class="eyebrow">New season arrival</p>
+            <h1>One travel-ready pair, from commute mornings to late return flights.</h1>
+            <p class="hero-copy">
+              Transit Runner 2.0 was designed for everyday travel: lightweight cushioning, weather-ready fabric,
+              and a profile that works from morning errands to evening flights.
+            </p>
+            <div class="hero-search">
+              <label class="visually-hidden" for="store-search">Search products</label>
+              <input id="store-search" type="text" value="running sneakers" aria-label="Search products">
+              <button type="button"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </div>
+            <div class="hero-tags">
+              <span><i class="fa-solid fa-truck-fast"></i> Free shipping over $60</span>
+              <span><i class="fa-solid fa-shield-heart"></i> Secure checkout</span>
+              <span><i class="fa-regular fa-star"></i> 4.8 average rating</span>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-promo-card">
+              <p class="promo-kicker">Curated today</p>
+              <h2>Transit Runner 2.0</h2>
+              <p class="promo-copy">
+                Lightweight city runner with weather-resistant mesh, quick-lace pull, and a cushioned sole for commute days.
+              </p>
+              <div class="promo-meta">
+                <div>
+                  <span>Color</span>
+                  <strong>Signal Red</strong>
+                </div>
+                <div>
+                  <span>Sizes</span>
+                  <strong>US 8-11</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 align-items-start">
+        <div class="col-xl-7">
+          <article class="product-card shadow-sm">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="product-media">
+                  <div class="media-badge">Featured Drop</div>
+                  <img
+                    id="product-main-image"
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80"
+                    alt="Transit Runner 2.0 sneakers"
+                  >
+                  <div class="media-thumbs">
+                    <button type="button" class="thumb-pill is-active">Front</button>
+                    <button type="button" class="thumb-pill">Detail</button>
+                    <button type="button" class="thumb-pill">Lifestyle</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="product-body">
+                  <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                    <span class="category-chip">Footwear</span>
+                    <span class="review-chip"><i class="fa-solid fa-star"></i> 4.8</span>
+                    <span class="muted-inline">312 ratings</span>
+                  </div>
+                  <h2>Transit Runner 2.0</h2>
+                  <p class="product-subtitle">Breathable performance shoe for travel, commute, and all-day walking.</p>
+                  <div class="price-row">
+                    <strong>$84.00</strong>
+                    <span>or 4 interest-free installments of $21.00</span>
+                  </div>
+
+                  <div class="product-tabs">
+                    <button type="button" class="tab-button is-active" data-tab-target="description">Description</button>
+                    <button type="button" class="tab-button" data-tab-target="features">Features</button>
+                    <button type="button" class="tab-button" data-tab-target="reviews">Reviews</button>
+                  </div>
+
+                  <div class="tab-panel is-active" data-tab-panel="description">
+                    <p>
+                      A travel-first running shoe with a knit upper, flexible support, and a cushioned sole tuned
+                      for long walking days, station transfers, and short training sessions.
+                    </p>
+                  </div>
+                  <div class="tab-panel" data-tab-panel="features">
+                    <ul class="feature-list">
+                      <li>Water-resistant knit upper with reflective trim</li>
+                      <li>Dual-density sole for city walking and short runs</li>
+                      <li>Low-profile heel loop and pack-flat construction</li>
+                    </ul>
+                  </div>
+                  <div class="tab-panel" data-tab-panel="reviews">
+                    <div class="review-block">
+                      <strong>Mara V.</strong>
+                      <p>Comfortable enough for flights and still structured enough for daily wear.</p>
+                    </div>
+                    <div class="review-block">
+                      <strong>Alex C.</strong>
+                      <p>The grip is better than expected and the fit feels true to size.</p>
+                    </div>
+                  </div>
+
+                  <div class="option-section">
+                    <div>
+                      <p class="option-label">Color</p>
+                      <div class="option-pills">
+                        <button type="button" class="option-pill is-selected" data-option-group="color">Signal Red</button>
+                        <button type="button" class="option-pill" data-option-group="color">Slate Grey</button>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="option-label">Size</p>
+                      <div class="option-pills">
+                        <button type="button" class="option-pill" data-option-group="size">US 8</button>
+                        <button type="button" class="option-pill is-selected" data-option-group="size">US 9</button>
+                        <button type="button" class="option-pill" data-option-group="size">US 10</button>
+                        <button type="button" class="option-pill" data-option-group="size">US 11</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="trust-line">
+                    <span><i class="fa-solid fa-box-open"></i> In stock and ready to ship</span>
+                    <span><i class="fa-solid fa-arrow-rotate-left"></i> 30-day returns</span>
+                  </div>
+
+                  <div class="mini-meta-grid">
+                    <div class="meta-chip-card">
+                      <span>Materials</span>
+                      <strong>Water-resistant knit and EVA sole</strong>
+                    </div>
+                    <div class="meta-chip-card">
+                      <span>Best for</span>
+                      <strong>City walking, airport transfers, day trips</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-xl-5">
+          <aside class="stacked-sidebar">
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Product snapshot</span>
+                <span class="price-inline">$84.00</span>
+              </div>
+              <p class="sidebar-copy">
+                Available in the current weekly drop and ready to ship from the city warehouse.
+              </p>
+              <button id="add-demo-product" class="add-cart-button" type="button">Add to Cart</button>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">What shoppers mention</span>
+              </div>
+              <div class="info-list-card">
+                <div class="info-list-row"><span>Fit</span><strong>True to size</strong></div>
+                <div class="info-list-row"><span>Weight</span><strong>Light for all-day wear</strong></div>
+                <div class="info-list-row"><span>Use case</span><strong>Best for travel days</strong></div>
+              </div>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Shipping & Returns</span>
+              </div>
+              <p class="sidebar-copy">
+                Free priority shipping is enabled for qualifying orders and returns stay open for 30 days after delivery.
+              </p>
+              <div class="info-list-card">
+                <div class="info-list-row"><span>Dispatch window</span><strong>Same business day</strong></div>
+                <div class="info-list-row"><span>Delivery speed</span><strong>Priority</strong></div>
+                <div class="info-list-row"><span>Return policy</span><strong>30 days</strong></div>
+              </div>
+            </section>
+
+            <section class="sidebar-card">
+              <div class="sidebar-head">
+                <span class="eyebrow">Need Help?</span>
+              </div>
+              <div class="info-list-card">
+                <div class="info-list-row"><span>Styling support</span><strong>Size guide available</strong></div>
+                <div class="info-list-row"><span>Order help</span><strong>Checkout assistance online</strong></div>
+                <div class="info-list-row"><span>Support hours</span><strong>08:00 to 20:00</strong></div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="catalog-strip mt-4 mt-lg-5">
+        <article class="catalog-card">
+          <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=80" alt="Trail commuter sneakers">
+          <div class="catalog-card-body">
+            <p class="eyebrow">Also trending</p>
+            <h3>Metro Pace Knit</h3>
+            <p>Low-profile trainer with flexible upper and compact pack shape.</p>
+          </div>
+        </article>
+        <article class="catalog-card">
+          <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=80" alt="Weekend duffel">
+          <div class="catalog-card-body">
+            <p class="eyebrow">Pairs well with</p>
+            <h3>Weekender Pack</h3>
+            <p>Water-resistant overnight bag sized for short city breaks and quick flights.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
