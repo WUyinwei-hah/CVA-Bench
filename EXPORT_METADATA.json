@@ -1,15 +1,21 @@
 {
-  "scope": "mainline",
-  "included_sites": [
-    "admin-security-console",
-    "esign-contract-hub",
-    "openclaw",
-    "password-manager-vault",
-    "payroll-direct-deposit",
-    "shopping-openapps"
+  "scope": "pages_only",
+  "layout": "public_pages_repo",
+  "copied_root_files": [
+    ".gitignore",
+    ".nojekyll",
+    "index.html",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
   ],
-  "copied_scenarios": 22,
-  "copied_timing_scenarios": 41,
-  "included_webarena": true,
-  "export_layout": "standalone_repo"
+  "copied_root_dirs": [
+    ".github",
+    "sites"
+  ],
+  "copied_docs": [
+    "BENCHMARK_OVERVIEW.md",
+    "CVA_Bench_pages_current_webpages_system_prompts_and_goals_2026_04_07.md",
+    "CVA_Bench_pages_debench_timing_validation_2026_04_07.md",
+    "CVA_Bench_pages_review_sheet_2026_04_07.md"
+  ]
 }
