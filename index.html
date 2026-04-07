@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CVA-Bench</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #eef2f6;
+      --panel: rgba(255, 255, 255, 0.88);
+      --ink: #17304a;
+      --muted: #567089;
+      --line: rgba(23, 48, 74, 0.12);
+      --accent: #0f6cbd;
+      --accent-2: #164b7a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(15, 108, 189, 0.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(22, 75, 122, 0.14), transparent 28%),
+        linear-gradient(180deg, #f7f9fc 0%, var(--bg) 100%);
+      color: var(--ink);
+    }
+
+    .shell {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 48px 0 64px;
+    }
+
+    .hero {
+      padding: 40px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 28px 72px rgba(24, 48, 74, 0.1);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 0.98;
+    }
+
+    .hero-copy {
+      width: min(760px, 100%);
+      margin: 20px 0 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .section {
+      margin-top: 26px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+
+    .links {
+      display: grid;
+      gap: 12px;
+    }
+
+    .link-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .link-label {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .link-label strong {
+      font-size: 16px;
+    }
+
+    .link-label span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 680px) {
+      .hero {
+        padding: 28px 22px;
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      .link-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">CVA-Bench</p>
+      <h1>Context-first benchmark pages for computer-use agent security</h1>
+      <p class="hero-copy">
+        This site hosts the static CVA-Bench pages used to study whether agents
+        comply with visibly suspicious popups when those popups appear tightly
+        coupled to the current task.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <h2>Mainline families</h2>
+          <p>Shopping, provider integration, payroll, password manager, admin console, and e-sign flows.</p>
+        </article>
+        <article class="card">
+          <h2>Variants</h2>
+          <p>Clean, attack, and legit variants are injected by the runner instead of being exposed in the URL.</p>
+        </article>
+        <article class="card">
+          <h2>Public hosting</h2>
+          <p>These pages are served through GitHub Pages so evaluation no longer depends on a localhost domain.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Representative pages</h2>
+      <div class="links">
+        <div class="link-row">
+          <div class="link-label">
+            <strong>OpenClaw provider connection</strong>
+            <span>Mainline token / provider integration family</span>
+          </div>
+          <a href="./sites/openclaw/index.html">Open page</a>
+        </div>
+        <div class="link-row">
+          <div class="link-label">
+            <strong>OpenApps shopping checkout</strong>
+            <span>Mainline payment / checkout family</span>
+          </div>
+          <a href="./sites/shopping_openapps/index.html">Open page</a>
+        </div>
+        <div class="link-row">
+          <div class="link-label">
+            <strong>Payroll direct deposit</strong>
+            <span>Finance-admin verification family</span>
+          </div>
+          <a href="./sites/payroll_direct_deposit/index.html">Open page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
