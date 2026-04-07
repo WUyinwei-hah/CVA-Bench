@@ -6,8 +6,31 @@
 
   const params = new URLSearchParams(window.location.search);
   const pageName = document.body.dataset.page || "index";
-  const variant = params.get("variant") || sessionStorage.getItem(config.variantStorageKey) || "clean";
-  const attackTiming = variant === "attack" ? (params.get("timing") || "late") : "late";
+
+  function loadInjectedConfig(site) {
+    const storageKey = "cva_bench_bootstrap_" + site;
+    try {
+      const raw = sessionStorage.getItem(storageKey);
+      if (raw) {
+        return JSON.parse(raw);
+      }
+    } catch (error) {}
+
+    if (window.__CVA_SCENARIO_CONFIG__ && window.__CVA_SCENARIO_CONFIG__.site === site) {
+      return window.__CVA_SCENARIO_CONFIG__;
+    }
+    return null;
+  }
+
+  function buildCleanUrl(name) {
+    const next = new URL(name + ".html", window.location.href);
+    next.search = "";
+    return next.toString();
+  }
+
+  const injectedConfig = loadInjectedConfig(config.site);
+  const variant = injectedConfig?.variant || params.get("variant") || sessionStorage.getItem(config.variantStorageKey) || "clean";
+  const attackTiming = variant === "attack" ? (injectedConfig?.attack_timing || params.get("timing") || "late") : "late";
 
   function createFreshState() {
     return {
@@ -18,6 +41,8 @@
       events: [],
       notes: [],
       current_view: "dashboard",
+      return_to_page: "index",
+      completion_source: "clean",
       attack_dismissed: false,
       attack_timing: attackTiming,
       attack_shown_stages: []
@@ -92,29 +117,25 @@
   }
 
   function buildPageUrl(name, extraParams) {
-    const next = new URL(name + ".html", window.location.href);
-    next.searchParams.set("variant", variant);
-    if (variant === "attack") {
-      next.searchParams.set("timing", attackTiming);
-    }
-    if (extraParams) {
-      Object.entries(extraParams).forEach(function ([key, value]) {
-        next.searchParams.set(key, value);
-      });
-    }
-    return next.toString();
+    return buildCleanUrl(name, extraParams);
   }
 
   function configureNotesLinks() {
     document.querySelectorAll(config.notesLinkSelector).forEach(function (link) {
-      link.href = buildPageUrl("notes", { from: pageName });
+      link.href = buildPageUrl("notes");
+      link.addEventListener("click", function () {
+        state.return_to_page = pageName;
+        saveState();
+      });
     });
 
     const returnLink = document.getElementById(config.notesReturnId);
     if (!returnLink) {
       return;
     }
-    returnLink.href = buildPageUrl("index");
+    const allowedReturnPages = ["index", "review", "confirmation"];
+    const targetPage = allowedReturnPages.includes(state.return_to_page || "") ? state.return_to_page : "index";
+    returnLink.href = buildPageUrl(targetPage);
   }
 
   function showView(viewName) {
@@ -138,6 +159,8 @@
 
   function completeFlow(source) {
     state.task_completed = true;
+    state.completion_source = source || "clean";
+    saveState();
     logEvent("task_completion", { completion_signal: config.completionSignal });
     setStatus(config.completeStatus, true);
     const confirmationLabel = document.getElementById(config.confirmationStatusId);
@@ -146,7 +169,7 @@
     }
     const completionSource = document.getElementById(config.confirmationSourceId);
     if (completionSource) {
-      completionSource.textContent = source;
+      completionSource.textContent = state.completion_source;
     }
     showView("confirmation");
   }
@@ -190,6 +213,11 @@
       showView("confirmation");
     } else {
       showView("dashboard");
+    }
+
+    const completionSource = document.getElementById(config.confirmationSourceId);
+    if (completionSource) {
+      completionSource.textContent = state.completion_source || "clean";
     }
   }
 

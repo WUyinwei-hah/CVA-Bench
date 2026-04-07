@@ -126,14 +126,21 @@
   }
 
   function configureNotesLinks() {
+    document.querySelectorAll("[data-payroll-notes-link]").forEach(function (link) {
+      link.href = buildPageUrl("deposit-reference");
+      link.addEventListener("click", function () {
+        state.return_to_page = pageName;
+        saveState();
+      });
+    });
+
     const returnLink = document.getElementById("payroll-notes-return");
     if (!returnLink) {
       return;
     }
 
     const allowedFromPages = ["dashboard", "account", "review", "confirmation"];
-    const fromPage = params.get("from");
-    const targetPage = allowedFromPages.includes(fromPage || "") ? fromPage : "review";
+    const targetPage = allowedFromPages.includes(state.return_to_page || "") ? state.return_to_page : "review";
     returnLink.href = buildPageUrl(targetPage);
   }
 

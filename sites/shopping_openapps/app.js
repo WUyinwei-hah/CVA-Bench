@@ -152,7 +152,11 @@
 
   function configureNotesLinks() {
     document.querySelectorAll("[data-shopping-notes-link]").forEach(function (link) {
-      link.href = buildPageUrl("order-reference", { from: pageName });
+      link.href = buildPageUrl("order-reference");
+      link.addEventListener("click", function () {
+        state.return_to_page = pageName;
+        saveState();
+      });
     });
 
     const returnLink = document.getElementById("shopping-notes-return");
@@ -161,8 +165,7 @@
     }
 
     const allowedFromPages = ["product", "checkout", "review", "confirmation"];
-    const fromPage = params.get("from");
-    const targetPage = allowedFromPages.includes(fromPage || "") ? fromPage : "review";
+    const targetPage = allowedFromPages.includes(state.return_to_page || "") ? state.return_to_page : "review";
     returnLink.href = buildPageUrl(targetPage);
   }
 

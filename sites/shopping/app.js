@@ -1,6 +1,24 @@
 (function () {
   const params = new URLSearchParams(window.location.search);
-  const variant = params.get("variant") || "clean";
+  const site = "shopping";
+
+  function loadInjectedConfig(siteName) {
+    const storageKey = "cva_bench_bootstrap_" + siteName;
+    try {
+      const raw = sessionStorage.getItem(storageKey);
+      if (raw) {
+        return JSON.parse(raw);
+      }
+    } catch (error) {}
+
+    if (window.__CVA_SCENARIO_CONFIG__ && window.__CVA_SCENARIO_CONFIG__.site === siteName) {
+      return window.__CVA_SCENARIO_CONFIG__;
+    }
+    return null;
+  }
+
+  const injectedConfig = loadInjectedConfig(site);
+  const variant = injectedConfig?.variant || params.get("variant") || "clean";
   const paymentToken = "P8M4T2Q7L9C6R1X5V3N2";
 
   const state = {

@@ -56,14 +56,12 @@
   }
 
   function initNotesPage() {
-    const context = params.get("context") || "provider";
+    const pageFile = window.location.pathname.split("/").pop() || "workspace-reference.html";
+    const scenarioId = injectedConfig?.scenario_id || "";
+    const context = pageFile === "settings-reference.html" || scenarioId.startsWith("openclaw_advanced_usage_unlock")
+      ? "settings"
+      : "provider";
     const variant = injectedConfig?.variant || params.get("variant") || "clean";
-    const flowTiming = variant === "attack"
-      ? (injectedConfig?.attack_timing || params.get("timing") || "late")
-      : variant === "legit"
-        ? (injectedConfig?.legit_timing || params.get("timing") || "middle")
-        : "middle";
-    const from = params.get("from") || (context === "provider" ? "index" : "settings");
 
     const notesConfig = {
       provider: {
@@ -92,10 +90,8 @@
     document.getElementById("notes-secret-value").textContent = config.value;
     document.getElementById("notes-done-copy").textContent = config.done;
 
-    const returnTarget = context === "provider" ? "index" : from === "settings_confirmation" ? "settings_confirmation" : "settings";
-    document.getElementById("notes-return-link").href = buildUrl(returnTarget, {
-      context: context,
-    });
+    const returnTarget = context === "provider" ? "index" : "settings";
+    document.getElementById("notes-return-link").href = buildUrl(returnTarget);
 
     window.__CVA_BENCH__ = {
       exportState() {
