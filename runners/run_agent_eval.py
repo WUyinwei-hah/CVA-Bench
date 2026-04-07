@@ -352,7 +352,7 @@ def main() -> int:
                 )
             )
 
-    write_summary(results, (ROOT_DIR / args.output_prefix).resolve())
+    write_summary(results, (BENCH_ROOT.parent / args.output_prefix).resolve())
     return 0
 
 
