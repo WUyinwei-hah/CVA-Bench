@@ -1,0 +1,375 @@
+:root {
+  --surface: #f4f8f6;
+  --ink: #1a2a23;
+  --muted: #617268;
+  --line: rgba(26, 42, 35, 0.08);
+  --accent: #2b8a5d;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(43, 138, 93, 0.1), transparent 24%), var(--surface);
+  color: var(--ink);
+}
+
+.crm-page {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-lockup {
+  gap: 0.75rem;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #26734e, #49b67d);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.back-button {
+  margin-right: 0.15rem;
+}
+
+.metric-card,
+.crm-card,
+.side-card,
+.confirmation-card {
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 28px 68px rgba(26, 42, 35, 0.08);
+}
+
+.metric-card {
+  padding: 1.05rem 1.1rem;
+}
+
+.metric-card strong {
+  display: block;
+  margin: 0.2rem 0 0.15rem;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.metric-card p,
+.activity-list {
+  margin: 0;
+  color: var(--muted);
+}
+
+.metric-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.segment-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1.35rem 0 1rem;
+}
+
+.segment-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(43, 138, 93, 0.08);
+  color: var(--ink);
+  font-size: 0.88rem;
+}
+
+.segment-pill.is-active {
+  background: rgba(43, 138, 93, 0.14);
+  font-weight: 600;
+}
+
+.table-shell {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.table-shell table {
+  margin-bottom: 0;
+}
+
+.detail-stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.detail-row span,
+.review-label {
+  color: var(--muted);
+}
+
+.detail-row strong {
+  font-weight: 600;
+}
+
+.activity-list {
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.review-panel {
+  padding: 1rem 1rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fbfdfc, #f6faf8);
+}
+
+.review-panel strong {
+  display: block;
+  margin: 0.3rem 0 0.35rem;
+}
+
+.review-panel p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.notes-shortcut {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(43, 138, 93, 0.16);
+  background: rgba(43, 138, 93, 0.08);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.notes-shortcut.is-active {
+  background: rgba(43, 138, 93, 0.14);
+}
+
+.txt-shell {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(26, 42, 35, 0.08);
+  overflow: hidden;
+}
+
+.txt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: #f7faf8;
+}
+
+.txt-filename {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.txt-note {
+  margin: 0;
+  padding: 1.1rem 1rem 1.2rem;
+  min-height: 18rem;
+  background: #fff;
+  color: #2f3b35;
+  font: 0.95rem/1.7 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  white-space: pre-wrap;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 17, 28, 0.52);
+  z-index: 30;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.attack-modal,
+.trusted-modal {
+  width: min(30rem, 100%);
+}
+
+.attack-modal {
+  border-radius: 12px;
+  border: 3px solid #9f8c00;
+  background: #f7f6ed;
+  padding: 1rem;
+  box-shadow: 0 28px 60px rgba(21, 27, 35, 0.35);
+}
+
+.attack-ribbon {
+  display: inline-flex;
+  padding: 0.18rem 0.5rem;
+  margin-bottom: 0.7rem;
+  background: #c4b400;
+  color: #1e1e0f;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.attack-modal h3 {
+  margin-bottom: 0.55rem;
+  font-size: 1.25rem;
+}
+
+.attack-copy {
+  margin-bottom: 0.75rem;
+  color: #403d25;
+  line-height: 1.55;
+}
+
+.rough-label {
+  font-weight: 700;
+  color: #4d4929;
+}
+
+.rough-input {
+  border-radius: 6px;
+  border: 2px solid #7d784f;
+  background: #fffdf6;
+}
+
+.trusted-modal {
+  border-radius: 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 1.2rem;
+  box-shadow: 0 26px 56px rgba(26, 42, 35, 0.18);
+}
+
+.trusted-head h3 {
+  margin: 0.55rem 0 0;
+}
+
+.trusted-copy {
+  margin: 0.75rem 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.notes-inline-link {
+  display: inline-flex;
+  margin-top: 0.65rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.attack-submit {
+  background: #d6c40a;
+  border-color: #d6c40a;
+  color: #28220e;
+  font-weight: 700;
+}
+
+.attack-close {
+  background: #f0efe4;
+  border-color: #c6c2a0;
+  color: #4c472c;
+}
+
+.feedback-line {
+  min-height: 1.3rem;
+  margin: 0.8rem 0 0;
+  color: #564f2a;
+  font-size: 0.9rem;
+}
+
+.trusted-feedback {
+  color: #2b8a5d;
+}
+
+.delivered-card {
+  display: grid;
+  gap: 0.95rem;
+  padding: 1rem 1.05rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, #fbfdfc, #f6faf8);
+  border: 1px solid var(--line);
+}
+
+@media (max-width: 991px) {
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-head,
+  .review-footer,
+  .txt-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .detail-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

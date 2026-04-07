@@ -1,0 +1,66 @@
+:root {
+  --portal-font: "Inter", "Segoe UI", sans-serif;
+  --portal-bg: #f6f8fb;
+  --portal-ink: #162131;
+  --portal-nav-bg: #243b53;
+  --portal-accent: #206bc4;
+  --portal-accent-dark: #1756a2;
+  --portal-card-shadow: 0 22px 48px rgba(32, 107, 196, 0.08);
+  --portal-block-bg: #f3f7fc;
+  --portal-chip-bg: rgba(32, 107, 196, 0.08);
+  --portal-chip-ink: #206bc4;
+}
+
+.invoice-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #206bc4, #60a5fa);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.invoice-hero {
+  padding: 2rem 0 1.6rem;
+  background: radial-gradient(circle at left top, rgba(32, 107, 196, 0.12), transparent 35%), #f6f8fb;
+}
+
+.statement-table {
+  margin-top: 1.2rem;
+  border: 1px solid rgba(22, 33, 49, 0.08);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+
+.statement-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr 1fr 0.8fr;
+  gap: 1rem;
+  padding: 0.95rem 1rem;
+  background: #fff;
+}
+
+.statement-row + .statement-row {
+  border-top: 1px solid rgba(22, 33, 49, 0.08);
+}
+
+.statement-row.heading {
+  background: #f4f7fb;
+  color: #5f6d7b;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 767px) {
+  .statement-row {
+    grid-template-columns: 1fr;
+  }
+}
+

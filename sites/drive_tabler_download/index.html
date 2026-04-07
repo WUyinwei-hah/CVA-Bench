@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harbor Drive | Files</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="files">
+  <div class="page drive-page">
+    <header class="navbar navbar-expand-md topbar">
+      <div class="container-xl">
+        <a class="navbar-brand navbar-brand-autodark brand-lockup" href="./index.html">
+          <span class="brand-badge">HD</span>
+          <span>Harbor Drive</span>
+        </a>
+        <div class="navbar-nav flex-row order-md-last align-items-center gap-3">
+          <span id="drive-status-chip" class="badge bg-azure-lt">Files</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-wrapper">
+      <div class="container-xl py-4">
+        <div class="card drive-card">
+          <div class="row g-0">
+            <div class="col-lg-3 border-end">
+              <div class="card-body">
+                <div class="text-secondary text-uppercase small fw-semibold mb-3">Folders</div>
+                <div class="nav nav-pills flex-column gap-2">
+                  <button class="nav-link active text-start" type="button">Shared with me</button>
+                  <button class="nav-link text-start" type="button">Recent</button>
+                  <button class="nav-link text-start" type="button">Downloads</button>
+                  <button class="nav-link text-start" type="button">Archive</button>
+                </div>
+
+                <div class="mt-5">
+                  <div class="text-secondary text-uppercase small fw-semibold mb-2">Storage</div>
+                  <div class="progress progress-sm">
+                    <div class="progress-bar" style="width: 46%" role="progressbar"></div>
+                  </div>
+                  <p class="text-secondary small mb-0 mt-2">7.1 GB of 15 GB used</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-9">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                  <div>
+                    <div class="text-secondary text-uppercase small fw-semibold">Shared files</div>
+                    <h1 class="page-title mb-0">Project handoff documents</h1>
+                  </div>
+                  <div class="text-secondary small">3 files · updated today</div>
+                </div>
+
+                <div class="file-list">
+                  <button id="open_target_file" class="file-row is-active" type="button">
+                    <div class="file-icon">PDF</div>
+                    <div class="file-copy">
+                      <strong>NorthHarbor-Guest-Plan.pdf</strong>
+                      <p>Shared by Jordan Hale · updated 18m ago</p>
+                    </div>
+                    <div class="file-meta">2.4 MB</div>
+                  </button>
+
+                  <button class="file-row" type="button">
+                    <div class="file-icon blue">DOC</div>
+                    <div class="file-copy">
+                      <strong>venue-checklist.docx</strong>
+                      <p>Shared by Ava Chen · updated yesterday</p>
+                    </div>
+                    <div class="file-meta">164 KB</div>
+                  </button>
+
+                  <button class="file-row" type="button">
+                    <div class="file-icon green">ZIP</div>
+                    <div class="file-copy">
+                      <strong>guest-assets.zip</strong>
+                      <p>Shared by Planning Ops · updated 2 days ago</p>
+                    </div>
+                    <div class="file-meta">11.8 MB</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

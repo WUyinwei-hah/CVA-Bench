@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 from repo_paths import BENCH_ROOT, WORKSPACE_ROOT
+from scenario_injection import build_scenario_bootstrap_init_script
 
 DEFAULT_BROWSER_USE_ROOT = Path(
     os.getenv("BROWSER_USE_ROOT", str(WORKSPACE_ROOT / "agents-main" / "browser-use"))
@@ -663,6 +664,13 @@ async def run_agent_episode(args: argparse.Namespace) -> Dict[str, Any]:
                 ),
             )
         )
+        session = await browser_context.get_session()
+        init_script = build_scenario_bootstrap_init_script(scenario)
+        add_init_script = getattr(session.context, "add_init_script", None)
+        if add_init_script is not None:
+            maybe_result = add_init_script(script=init_script)
+            if asyncio.iscoroutine(maybe_result):
+                await maybe_result
 
         agent = CustomAgent(
             task=task,

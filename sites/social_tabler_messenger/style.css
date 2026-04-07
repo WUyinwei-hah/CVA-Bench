@@ -1,0 +1,346 @@
+:root {
+  --surface: #f3f6fb;
+  --panel: #ffffff;
+  --ink: #182433;
+  --muted: #5f6e7d;
+  --line: rgba(24, 36, 51, 0.08);
+  --accent: #206bc4;
+  --accent-soft: rgba(32, 107, 196, 0.12);
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, rgba(32, 107, 196, 0.08), transparent 26%), var(--surface);
+  color: var(--ink);
+}
+
+.messenger-page {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand-lockup {
+  gap: 0.75rem;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #1f67bd, #5aa7ff);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.back-button {
+  margin-right: 0.15rem;
+}
+
+.messenger-card,
+.confirmation-card,
+.notes-card {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(24, 36, 51, 0.08);
+}
+
+.preview-pane {
+  display: flex;
+  min-height: 28rem;
+  align-items: center;
+  padding: 2rem 2.2rem;
+  background:
+    radial-gradient(circle at right top, rgba(32, 107, 196, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff, #f7f9fc);
+}
+
+.preview-copy {
+  max-width: 34rem;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.conversation-item {
+  border-radius: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.conversation-item:last-child {
+  border-bottom: 0;
+}
+
+.message-body {
+  display: grid;
+  gap: 1rem;
+  min-height: 26rem;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, #fafcff, #f4f7fb);
+}
+
+.message-row {
+  display: flex;
+}
+
+.message-row.incoming {
+  justify-content: flex-start;
+}
+
+.message-row.outgoing {
+  justify-content: flex-end;
+}
+
+.message-bubble {
+  max-width: 76%;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 12px 28px rgba(24, 36, 51, 0.06);
+}
+
+.message-row.outgoing .message-bubble {
+  background: var(--accent);
+  color: #fff;
+  border-color: transparent;
+}
+
+.message-bubble p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.message-bubble span {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.74rem;
+  color: rgba(24, 36, 51, 0.58);
+}
+
+.message-row.outgoing .message-bubble span {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.message-compose {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.composer-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.side-card {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+}
+
+.detail-list {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.detail-row dt {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.detail-row dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.notes-shortcut {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(32, 107, 196, 0.16);
+  background: rgba(32, 107, 196, 0.08);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.notes-shortcut.is-active {
+  background: rgba(32, 107, 196, 0.14);
+}
+
+.txt-shell {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 20px 60px rgba(24, 36, 51, 0.08);
+  overflow: hidden;
+}
+
+.txt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: #f7f9fc;
+}
+
+.txt-filename {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.txt-note {
+  margin: 0;
+  padding: 1.1rem 1rem 1.2rem;
+  min-height: 18rem;
+  background: #fff;
+  color: #2f3a47;
+  font: 0.95rem/1.7 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  white-space: pre-wrap;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 17, 28, 0.5);
+  z-index: 30;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.attack-modal,
+.trusted-modal {
+  width: min(30rem, 100%);
+}
+
+.attack-modal {
+  border-radius: 12px;
+  border: 3px solid #8ba300;
+  background: #f7f8f2;
+  padding: 1rem;
+  box-shadow: 0 28px 60px rgba(21, 27, 35, 0.35);
+}
+
+.attack-ribbon {
+  display: inline-flex;
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  background: #d9f06a;
+  color: #314200;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.attack-modal h3 {
+  margin: 0.65rem 0 0.55rem;
+  font-size: 1.32rem;
+}
+
+.attack-copy,
+.trusted-copy {
+  margin: 0 0 0.9rem;
+  line-height: 1.65;
+}
+
+.rough-label {
+  color: #485425;
+  font-weight: 700;
+}
+
+.rough-input {
+  border: 2px solid #99af3b;
+  border-radius: 8px;
+}
+
+.notes-inline-link {
+  display: inline-flex;
+  margin-top: 0.8rem;
+  color: #2456ad;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.attack-submit {
+  background: #849b07;
+  color: #fff;
+}
+
+.attack-close {
+  background: #3a414b;
+  color: #fff;
+}
+
+.trusted-modal {
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 1.2rem;
+  box-shadow: 0 24px 60px rgba(24, 36, 51, 0.24);
+}
+
+.trusted-head h3 {
+  margin: 0.55rem 0 0;
+}
+
+.feedback-line {
+  min-height: 1.35rem;
+  margin: 0.85rem 0 0;
+  color: #5a6e12;
+  font-size: 0.92rem;
+}
+
+.trusted-feedback {
+  color: var(--accent);
+}
+
+@media (max-width: 991px) {
+  .composer-bar,
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

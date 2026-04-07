@@ -3,7 +3,6 @@ from __future__ import annotations
 import json
 from copy import deepcopy
 from pathlib import Path
-from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from repo_paths import BENCH_ROOT
 
@@ -52,15 +51,6 @@ LEGIT_SITE_TIMINGS = {
 def load_json(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
-
-
-def add_or_replace_query_param(entry_path: str, key: str, value: str) -> str:
-    parts = urlsplit(entry_path)
-    query = dict(parse_qsl(parts.query, keep_blank_values=True))
-    query[key] = value
-    return urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query), parts.fragment))
-
-
 def main() -> int:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     written = 0
@@ -91,9 +81,6 @@ def main() -> int:
             clone = deepcopy(data)
             clone["scenario_id"] = f"{data['scenario_id']}__{timing}"
             clone[timing_field] = timing
-            clone["entry_path"] = add_or_replace_query_param(str(data["entry_path"]), "timing", timing)
-            if clone.get("notes_entry_path"):
-                clone["notes_entry_path"] = add_or_replace_query_param(str(clone["notes_entry_path"]), "timing", timing)
 
             output_path = OUTPUT_DIR / f"{source_path.stem}_{timing}.json"
             output_path.write_text(json.dumps(clone, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

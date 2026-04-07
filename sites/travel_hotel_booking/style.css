@@ -1,0 +1,255 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f7f2ec;
+  color: #1f1f1f;
+}
+
+.topbar a,
+.topbar p {
+  font-size: 0.92rem;
+}
+
+.header {
+  background: #f7f2ec;
+}
+
+.travel-hero {
+  position: relative;
+  min-height: 30rem;
+  padding: 4rem 0 5rem;
+  background: url("./assets/hero.jpg") center center / cover no-repeat;
+}
+
+.hero-backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(25, 25, 25, 0.22), rgba(25, 25, 25, 0.1));
+}
+
+.offer {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-orange,
+.btn-orange {
+  background: #d8792a;
+  color: #fff;
+}
+
+.btn-orange {
+  border: 0;
+}
+
+.availability {
+  position: relative;
+  z-index: 1;
+}
+
+.availability .card {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.16);
+}
+
+.ls-3 {
+  letter-spacing: 0.2rem;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.result-card {
+  border: 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.travel-results {
+  margin-top: -1.2rem;
+}
+
+.booking-summary-card,
+.booking-form-card,
+.summary-side-note,
+.confirmation-shell {
+  border-radius: 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.08);
+}
+
+.summary-image {
+  height: 18rem;
+  object-fit: cover;
+}
+
+.booking-review-box {
+  background: #f8f5f1;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.1rem;
+}
+
+.booking-total {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.notes-link-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.32rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.86rem;
+}
+
+.travel-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(10, 10, 10, 0.5);
+  z-index: 50;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.travel-attack-modal,
+.travel-trusted-modal {
+  width: min(32rem, 100%);
+}
+
+.travel-attack-modal {
+  border: 3px solid #8d8700;
+  background: #f4f0d8;
+  border-radius: 0.4rem;
+  padding: 1rem 1rem 1.1rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.3);
+}
+
+.travel-attack-ribbon {
+  display: inline-block;
+  background: #d7cb00;
+  color: #2a2806;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.8rem;
+}
+
+.travel-attack-copy {
+  color: #544f22;
+  line-height: 1.55;
+  margin-bottom: 0.8rem;
+}
+
+.rough-label {
+  color: #4c4724;
+  font-weight: 700;
+}
+
+.rough-input {
+  border: 2px solid #807941;
+  border-radius: 0.3rem;
+  background: #fffef6;
+}
+
+.travel-trusted-modal {
+  background: #fff;
+  border-radius: 0.65rem;
+  padding: 1.2rem;
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.2);
+}
+
+.trusted-copy {
+  color: #666;
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.travel-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 0.85rem;
+}
+
+.attack-submit {
+  background: #d0c00c;
+  border-color: #d0c00c;
+  color: #302a08;
+  font-weight: 700;
+}
+
+.attack-close {
+  background: #ece8ce;
+  border-color: #b9b18c;
+  color: #554f26;
+}
+
+.notes-inline-link {
+  display: inline-flex;
+  margin-top: 0.65rem;
+  color: #d8792a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.feedback-line {
+  min-height: 1.3rem;
+  margin: 0.8rem 0 0;
+  color: #514b22;
+  font-size: 0.92rem;
+}
+
+.trusted-feedback {
+  color: #198754;
+}
+
+.travel-txt-shell {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  box-shadow: 0 1.2rem 2.5rem rgba(0, 0, 0, 0.08);
+}
+
+.txt-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #faf7f2;
+}
+
+.txt-filename {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.txt-note {
+  margin: 0;
+  min-height: 20rem;
+  padding: 1.1rem 1rem;
+  white-space: pre-wrap;
+  font: 0.95rem/1.7 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+@media (max-width: 991px) {
+  .travel-hero {
+    min-height: 24rem;
+    padding-top: 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .txt-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

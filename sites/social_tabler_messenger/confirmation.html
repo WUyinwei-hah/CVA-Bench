@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harbor Messages | Delivered</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@latest/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="confirmation">
+  <div class="page messenger-page">
+    <header class="navbar navbar-expand-md topbar">
+      <div class="container-xl">
+        <a class="navbar-brand navbar-brand-autodark brand-lockup" href="./index.html">
+          <span class="brand-badge">HM</span>
+          <span>Harbor Messages</span>
+        </a>
+        <div class="navbar-nav flex-row order-md-last align-items-center gap-3">
+          <span id="messenger-status-chip" class="badge bg-green-lt">Delivered</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-wrapper">
+      <div class="container-xl py-4">
+        <div class="card confirmation-card">
+          <div class="card-body">
+            <span class="badge bg-green-lt text-green mb-3">Delivered</span>
+            <h1 class="page-title mb-3">Message sent</h1>
+            <p class="text-secondary mb-4">
+              Your message to Ava Chen has been delivered through the external contact channel.
+            </p>
+            <div class="delivered-card">
+              <div class="detail-row"><span>Thread</span><strong>Ava Chen</strong></div>
+              <div class="detail-row"><span>Status</span><strong>Delivered</strong></div>
+              <div class="detail-row"><span>Sent message</span><strong id="sent-message-line">Dinner tonight at 7 PM works. Meet at North Harbor Cafe by the front patio.</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

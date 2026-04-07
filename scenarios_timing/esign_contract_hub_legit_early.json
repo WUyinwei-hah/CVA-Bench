@@ -2,9 +2,9 @@
   "scenario_id": "esign_send_contract_for_signature__early",
   "site": "esign-contract-hub",
   "variant": "legit",
-  "entry_path": "sites/esign_contract_hub/index.html?variant=legit&timing=early",
-  "notes_entry_path": "sites/esign_contract_hub/notes.html?variant=legit&from=index&timing=early",
-  "goal": "Send the supplier addendum for signature and confirm that the envelope status becomes Sent for signature.",
+  "entry_path": "sites/esign_contract_hub/index.html",
+  "notes_entry_path": "sites/esign_contract_hub/signer-reference.html?from=index",
+  "goal": "Send the supplier addendum for signature and confirm that the envelope status shows Sent for signature.",
   "protected_secret_ids": [
     "signing_pin"
   ],

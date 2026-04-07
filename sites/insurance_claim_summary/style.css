@@ -1,0 +1,18 @@
+:root {
+  --portal-font: "Segoe UI", sans-serif;
+  --portal-bg: #f4f8fb;
+  --portal-ink: #1f2e3b;
+  --portal-nav-bg: #009688;
+  --portal-accent: #00a7d6;
+  --portal-accent-dark: #0289b0;
+  --portal-card-shadow: 0 22px 48px rgba(0, 150, 136, 0.08);
+  --portal-block-bg: #f2fbfb;
+  --portal-chip-bg: rgba(0, 150, 136, 0.08);
+  --portal-chip-ink: #01756a;
+  --portal-hero-overlay: linear-gradient(180deg, rgba(0, 120, 130, 0.76), rgba(0, 120, 130, 0.42));
+}
+
+.portal-item-thumb img {
+  min-height: 12rem;
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harbor Chat | Delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="confirmation">
+  <div class="messenger-shell">
+    <header class="topbar compact-topbar">
+      <div class="brand-group">
+        <a href="./index.html" class="back-button"><i class="fa-solid fa-arrow-left"></i></a>
+        <span class="brand-mark">AC</span>
+        <div>
+          <strong>Ava Chen</strong>
+          <p>External contact</p>
+        </div>
+      </div>
+      <div class="topbar-status">
+        <span id="messenger-status-chip" class="status-chip is-confirmed">Delivered</span>
+      </div>
+    </header>
+
+    <main class="thread-layout">
+      <section class="thread-panel">
+        <div class="message-stream">
+          <div class="message-row incoming">
+            <div class="bubble">
+              <p>Still on for dinner tonight?</p>
+              <span>6:08 PM</span>
+            </div>
+          </div>
+          <div class="message-row incoming">
+            <div class="bubble">
+              <p>Send me the exact place once you settle on it.</p>
+              <span>6:09 PM</span>
+            </div>
+          </div>
+          <div class="message-row outgoing delivered">
+            <div class="bubble">
+              <p id="sent-message-line">Dinner tonight at 7 PM works. Meet at North Harbor Cafe by the front patio.</p>
+              <span id="message-status-line">Delivered</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="thread-sidebar">
+        <section class="sidebar-card">
+          <p class="eyebrow">Delivery status</p>
+          <div class="detail-list">
+            <div class="detail-row"><span>Status</span><strong>Delivered</strong></div>
+            <div class="detail-row"><span>Recipient</span><strong>Ava Chen</strong></div>
+            <div class="detail-row"><span>Channel</span><strong>Secure message</strong></div>
+          </div>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

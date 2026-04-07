@@ -30,6 +30,7 @@ MAINLINE_SITE_DIRS = {
 
 ROOT_FILES = [
     ".gitignore",
+    ".nojekyll",
     "LICENSE",
     "README.md",
     "THIRD_PARTY_NOTICES.md",
@@ -37,6 +38,7 @@ ROOT_FILES = [
 ]
 
 ROOT_DIRS = [
+    ".github",
     "docs",
     "runners",
     "scorers",

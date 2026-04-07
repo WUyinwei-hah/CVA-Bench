@@ -1,0 +1,57 @@
+:root {
+  --portal-font: "Helvetica Neue", Arial, sans-serif;
+  --portal-bg: #eef2f6;
+  --portal-ink: #1f2e3c;
+  --portal-topbar-bg: #0f2235;
+  --portal-nav-bg: #1d3557;
+  --portal-accent: #c23b22;
+  --portal-accent-dark: #a6321d;
+  --portal-card-shadow: 0 20px 48px rgba(17, 35, 55, 0.08);
+  --portal-block-bg: #f4f7fb;
+  --portal-chip-bg: rgba(255, 255, 255, 0.16);
+  --portal-chip-ink: #ffffff;
+  --portal-hero-overlay: linear-gradient(180deg, rgba(15, 34, 53, 0.82), rgba(15, 34, 53, 0.52));
+}
+
+.gov-topbar {
+  color: #fff;
+}
+
+.gov-header {
+  background: #183049;
+}
+
+.gov-brand {
+  color: #fff;
+}
+
+.gov-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.gov-hero {
+  background-size: cover;
+  background-position: center;
+}
+
+.gov-card {
+  border-top: 4px solid #c23b22;
+}
+
+.gov-crest img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+

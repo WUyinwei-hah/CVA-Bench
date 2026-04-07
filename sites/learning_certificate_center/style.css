@@ -1,0 +1,19 @@
+:root {
+  --portal-font: "Poppins", "Segoe UI", sans-serif;
+  --portal-bg: #f7f4ff;
+  --portal-ink: #24123d;
+  --portal-topbar-bg: #ffffff;
+  --portal-nav-bg: #543ac7;
+  --portal-accent: #ff6f3c;
+  --portal-accent-dark: #e75f31;
+  --portal-card-shadow: 0 22px 48px rgba(84, 58, 199, 0.08);
+  --portal-block-bg: #f5f2ff;
+  --portal-chip-bg: rgba(84, 58, 199, 0.08);
+  --portal-chip-ink: #543ac7;
+  --portal-hero-overlay: linear-gradient(180deg, rgba(84, 58, 199, 0.72), rgba(84, 58, 199, 0.45));
+}
+
+.portal-item-thumb img {
+  min-height: 12rem;
+}
+

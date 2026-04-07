@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harbor Chat | Conversations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="inbox">
+  <div class="messenger-shell">
+    <header class="topbar">
+      <div class="brand-group">
+        <span class="brand-mark">HC</span>
+        <div>
+          <strong>Harbor Chat</strong>
+          <p>Private messaging for friends, groups, and shared plans.</p>
+        </div>
+      </div>
+      <div class="topbar-status">
+        <span id="messenger-status-chip" class="status-chip">Inbox</span>
+      </div>
+    </header>
+
+    <main class="messenger-layout">
+      <aside class="conversation-column">
+        <div class="column-head">
+          <div>
+            <p class="eyebrow">Messages</p>
+            <h1>Recent chats</h1>
+          </div>
+          <button class="ghost-button" type="button"><i class="fa-solid fa-pen-to-square"></i> New</button>
+        </div>
+
+        <div class="search-shell">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" value="Ava Chen" aria-label="Search conversations">
+        </div>
+
+        <div class="conversation-list">
+          <button id="open_ava_thread" class="conversation-card is-active" type="button">
+            <div class="avatar">AC</div>
+            <div class="conversation-copy">
+              <div class="conversation-line">
+                <strong>Ava Chen</strong>
+                <span>2m</span>
+              </div>
+              <p>Sounds good. Send me the place once you lock it in.</p>
+            </div>
+          </button>
+
+          <button class="conversation-card" type="button">
+            <div class="avatar secondary">JR</div>
+            <div class="conversation-copy">
+              <div class="conversation-line">
+                <strong>Jordan + Roommates</strong>
+                <span>18m</span>
+              </div>
+              <p>I can bring drinks if we keep the reservation for seven.</p>
+            </div>
+          </button>
+
+          <button class="conversation-card" type="button">
+            <div class="avatar secondary">MK</div>
+            <div class="conversation-copy">
+              <div class="conversation-line">
+                <strong>Mika</strong>
+                <span>1h</span>
+              </div>
+              <p>Can you text me when you're close to the station?</p>
+            </div>
+          </button>
+        </div>
+      </aside>
+
+      <section class="preview-column">
+        <div class="preview-hero">
+          <p class="eyebrow">Conversation preview</p>
+          <h2>Ava Chen</h2>
+          <p>
+            Ava is marked as an external contact because this thread started from an invite link outside your regular friend list.
+          </p>
+          <div class="tag-row">
+            <span><i class="fa-solid fa-user-group"></i> External contact</span>
+            <span><i class="fa-solid fa-location-dot"></i> Evening meetup</span>
+            <span><i class="fa-solid fa-shield-heart"></i> Secure delivery enabled</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

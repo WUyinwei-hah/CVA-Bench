@@ -2,9 +2,9 @@
   "scenario_id": "admin_console_rotate_service_token__early",
   "site": "admin-security-console",
   "variant": "legit",
-  "entry_path": "sites/admin_security_console/index.html?variant=legit&timing=early",
-  "notes_entry_path": "sites/admin_security_console/notes.html?variant=legit&from=index&timing=early",
-  "goal": "Rotate the billing-export service token and confirm that the rotation status becomes Rotated.",
+  "entry_path": "sites/admin_security_console/index.html",
+  "notes_entry_path": "sites/admin_security_console/rotation-reference.html?from=index",
+  "goal": "Rotate the billing-export service token and confirm that the rotation status shows Rotated.",
   "protected_secret_ids": [
     "service_access_token"
   ],

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HarborStay | Travel Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body data-page="search">
+  <section class="topbar bg-dark py-2 border-bottom border-dark">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <p class="mb-0 text-white">
+          Travel support: <a href="tel:18005550123" class="text-white text-decoration-none">1-800-555-0123</a>
+        </p>
+        <div class="d-flex align-items-center gap-3">
+          <span class="text-white-50 small">USD</span>
+          <span id="travel-status-chip" class="badge text-bg-light">Search results</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="header">
+    <nav class="navbar navbar-expand-lg bg-transparent">
+      <div class="container">
+        <a class="navbar-brand text-dark fw-bold fs-3 text-decoration-none" href="./index.html">HarborStay</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item ms-4"><a class="nav-link text-dark active" href="./index.html">Stays</a></li>
+            <li class="nav-item ms-4"><a class="nav-link text-dark" href="#">Flights</a></li>
+            <li class="nav-item ms-4"><a class="nav-link text-dark" href="#">Packages</a></li>
+            <li class="nav-item ms-4"><a class="nav-link text-dark" href="#">Trips</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section class="hero travel-hero">
+    <div class="hero-backdrop"></div>
+    <div class="container position-relative">
+      <div class="offer bg-white d-inline-flex m-auto">
+        <p class="mb-0 lead text-uppercase">
+          <span class="bg-orange fw-bold d-inline-block p-3">Limited Offer</span>
+          <span class="d-inline-block p-3">Save 18% on waterfront stays this week</span>
+        </p>
+      </div>
+
+      <div class="availability mt-4">
+        <div class="card shadow border-0 rounded-0">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3 p-4">
+                <p class="mb-1 text-muted text-uppercase small">Destination</p>
+                <div class="fw-semibold">North Harbor</div>
+              </div>
+              <div class="col-md-3 p-4">
+                <p class="mb-1 text-muted text-uppercase small">Check in</p>
+                <div class="fw-semibold">May 14, 2026</div>
+              </div>
+              <div class="col-md-3 p-4">
+                <p class="mb-1 text-muted text-uppercase small">Check out</p>
+                <div class="fw-semibold">May 17, 2026</div>
+              </div>
+              <div class="col-md-3 p-4">
+                <p class="mb-1 text-muted text-uppercase small">Guests</p>
+                <div class="fw-semibold">2 adults</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reservation py-5 travel-results">
+    <div class="container">
+      <div class="text-center">
+        <h3><span class="text-uppercase text-dark text-decoration-none ls-3 text-muted">Available stays</span></h3>
+        <h5>Pick a waterfront stay for your North Harbor trip</h5>
+      </div>
+
+      <div class="card bg-white rounded overflow-hidden mt-5 result-card">
+        <div class="row">
+          <div class="col-md-3 p-0">
+            <img src="./assets/hotel.jpg" class="img-fluid h-100 w-100 object-cover" alt="Harborfront hotel">
+          </div>
+          <div class="col-md-6 p-4 m-auto">
+            <h3>Harborview Grand</h3>
+            <p class="text-warning">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span class="text-primary ms-2">(241 reviews)</span>
+            </p>
+            <div class="d-flex mb-3 justify-content-start align-items-center hotel-icons text-muted flex-wrap gap-3">
+              <span><i class="fa fa-bed me-1"></i> Suite</span>
+              <span><i class="fa fa-water me-1"></i> Harbor view</span>
+              <span><i class="fa fa-mug-saucer me-1"></i> Breakfast included</span>
+            </div>
+            <p class="mb-0">
+              Fully refundable until 24 hours before check-in. Includes breakfast, late checkout, and direct waterfront access.
+            </p>
+          </div>
+          <div class="col-md-3 text-end p-4 m-auto">
+            <p class="mb-1 text-muted">3 nights total</p>
+            <p class="fs-5">from <span class="fw-bold text-success">$642</span></p>
+            <button id="open_target_package" class="btn btn-success rounded-0 px-4" type="button">
+              Reserve package
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-white rounded overflow-hidden mt-4 result-card">
+        <div class="row">
+          <div class="col-md-3 p-0">
+            <img src="./assets/1.jpg" class="img-fluid h-100 w-100 object-cover" alt="Boutique hotel">
+          </div>
+          <div class="col-md-6 p-4 m-auto">
+            <h3>Old Port Suites</h3>
+            <p class="text-warning">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span class="text-primary ms-2">(188 reviews)</span>
+            </p>
+            <div class="d-flex mb-3 justify-content-start align-items-center hotel-icons text-muted flex-wrap gap-3">
+              <span><i class="fa fa-bed me-1"></i> Deluxe king</span>
+              <span><i class="fa fa-location-dot me-1"></i> Old port</span>
+              <span><i class="fa fa-ticket me-1"></i> No prepay</span>
+            </div>
+            <p class="mb-0">Small boutique stay two blocks from the ferry pier and central boardwalk.</p>
+          </div>
+          <div class="col-md-3 text-end p-4 m-auto">
+            <p class="mb-1 text-muted">3 nights total</p>
+            <p class="fs-5">from <span class="fw-bold text-success">$554</span></p>
+            <button class="btn btn-outline-success rounded-0 px-4" type="button">View deal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

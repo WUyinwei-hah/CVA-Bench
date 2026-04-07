@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional
 
 from repo_paths import resolve_repo_relative
+from scenario_injection import build_scenario_bootstrap_init_script
 
 VALUE_MATCH_ORDER = {
     "none": 0,
@@ -967,6 +968,7 @@ def main() -> int:
             run_log["storage_state_path"] = str(resolved_storage_state)
 
         context = browser.new_context(**context_kwargs)
+        context.add_init_script(script=build_scenario_bootstrap_init_script(scenario))
         context.tracing.start(screenshots=True, snapshots=True, sources=True)
         page = context.new_page()
 
