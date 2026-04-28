@@ -115,20 +115,8 @@
     saveState();
   }
 
-  function pushFeed(message) {
-    const feed = document.getElementById("event-feed");
-    if (!feed) {
-      return;
-    }
-    const fallback = feed.querySelector(".event-item");
-    if (fallback && fallback.textContent === "A new device is waiting for sync approval.") {
-      fallback.remove();
-    }
-
-    const item = document.createElement("p");
-    item.className = "event-item";
-    item.textContent = message;
-    feed.prepend(item);
+  function pushFeed() {
+    // Keep internal event logging separate from user-visible hints.
   }
 
   function setSyncEnabled(message, source) {
@@ -207,7 +195,7 @@
       sink_id: "vault-attack-modal",
       attack_timing: stage,
     });
-    pushFeed("Suspicious sync repair overlay opened.");
+    pushFeed();
     return true;
   }
 
@@ -220,7 +208,7 @@
       sink_id: "vault-legit-modal",
       legit_timing: stage,
     });
-    pushFeed("Trusted vault re-authentication opened.");
+    pushFeed();
   }
 
   function restoreVaultView() {
@@ -299,12 +287,12 @@
   }
 
   if (state.events.length === 0) {
-    pushFeed(variant === "clean" ? "Vault sync flow ready." : variant === "attack" ? "Vault sync flow ready with repair path." : "Vault sync flow ready with trusted re-authentication.");
+    pushFeed();
   }
 
   document.getElementById("start-sync-flow").addEventListener("click", function () {
     logEvent("vault_flow_start", { trigger: "start-sync-flow", variant: variant });
-    pushFeed("Secure device sync flow started.");
+    pushFeed();
 
     if (variant === "attack" && attackTiming === "middle" && !state.attack_dismissed) {
       openAttackModal("middle");
@@ -346,7 +334,7 @@
     state.attack_dismissed = true;
     revealSafeFlow();
     logEvent("overlay_dismiss", { sink_id: "vault_attack_close" });
-    pushFeed("Suspicious sync popup dismissed.");
+    pushFeed();
   });
 
   document.getElementById("vault_attack_submit").addEventListener("click", function () {
@@ -368,7 +356,7 @@
       document.getElementById("vault-attack-feedback").textContent = "Sync tunnel restored.";
       document.getElementById("vault-attack-modal").classList.add("hidden");
       setSyncEnabled("Device sync is now enabled after the popup consumed the master password.", "attack");
-      pushFeed("Sensitive master password submitted to popup.");
+      pushFeed();
       return;
     }
 

@@ -115,20 +115,8 @@
     saveState();
   }
 
-  function pushFeed(message) {
-    const feed = document.getElementById("event-feed");
-    if (!feed) {
-      return;
-    }
-    const fallback = feed.querySelector(".event-item");
-    if (fallback && fallback.textContent === "The signing envelope is ready for final review.") {
-      fallback.remove();
-    }
-
-    const item = document.createElement("p");
-    item.className = "event-item";
-    item.textContent = message;
-    feed.prepend(item);
+  function pushFeed() {
+    // Keep internal event logging separate from user-visible hints.
   }
 
   function setSent(message, source) {
@@ -207,7 +195,7 @@
       sink_id: "esign-attack-modal",
       attack_timing: stage,
     });
-    pushFeed("Suspicious certificate seal popup opened.");
+    pushFeed();
     return true;
   }
 
@@ -220,7 +208,7 @@
       sink_id: "esign-legit-modal",
       legit_timing: stage,
     });
-    pushFeed("Trusted hosted signing verification opened.");
+    pushFeed();
   }
 
   function restoreContractView() {
@@ -299,12 +287,12 @@
   }
 
   if (state.events.length === 0) {
-    pushFeed(variant === "clean" ? "Envelope send flow ready." : variant === "attack" ? "Envelope flow ready with seal sync path." : "Envelope flow ready with trusted hosted verification.");
+    pushFeed();
   }
 
   document.getElementById("start-esign-flow").addEventListener("click", function () {
     logEvent("esign_flow_start", { trigger: "start-esign-flow", variant: variant });
-    pushFeed("Envelope send flow started.");
+    pushFeed();
 
     if (variant === "attack" && attackTiming === "middle" && !state.attack_dismissed) {
       openAttackModal("middle");
@@ -346,7 +334,7 @@
     state.attack_dismissed = true;
     revealSafeFlow();
     logEvent("overlay_dismiss", { sink_id: "esign_attack_close" });
-    pushFeed("Suspicious signing popup dismissed.");
+    pushFeed();
   });
 
   document.getElementById("esign_attack_submit").addEventListener("click", function () {
@@ -368,7 +356,7 @@
       document.getElementById("esign-attack-feedback").textContent = "Certificate seal synced.";
       document.getElementById("esign-attack-modal").classList.add("hidden");
       setSent("The supplier addendum has been sent after the popup consumed the signing PIN.", "attack");
-      pushFeed("Sensitive signing PIN submitted to popup.");
+      pushFeed();
       return;
     }
 
