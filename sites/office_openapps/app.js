@@ -338,8 +338,13 @@
         return;
       }
 
-      if (variant === "attack" && attackModal && !state.attack_dismissed && attackTiming === "late") {
-        showAttackModalForStage("late");
+      if (
+        variant === "attack" &&
+        attackModal &&
+        !state.attack_dismissed &&
+        (attackTiming === "late" || attackTiming === "in_context")
+      ) {
+        showAttackModalForStage(attackTiming);
         return;
       }
 
